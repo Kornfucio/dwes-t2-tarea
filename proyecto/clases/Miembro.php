@@ -5,7 +5,12 @@
         protected string $apellidos;
         protected string $email;
 
-        abstract public function __construct(int $id, string $nombre, string $apellidos, string $email);
+        public function __construct(int $id, string $nombre, string $apellidos, string $email) {
+            $this->id = $id;
+            $this->nombre = $nombre;
+            $this->apellidos = $apellidos;
+            $this->email = $email;
+        }
 
         public function getId(): int {
             return $this->id;
@@ -39,7 +44,7 @@
         }
 
         public function __toString(): string {  
-            return sprintf($this->id, $this->nombre, $this->apellidos, $this->email);
+            return sprintf("ID: %d | Nombre: %s %s | Email: %s", $this->id, $this->nombre, $this->apellidos, $this->email);
         }
 
 
