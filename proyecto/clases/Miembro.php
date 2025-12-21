@@ -44,7 +44,7 @@
         }
 
         public function __toString(): string {  
-            return sprintf("ID: %d | Nombre: %s %s | Email: %s", $this->id, $this->nombre, $this->apellidos, $this->email);
+            return sprintf("Nombre: %s %s, Email: %s",  $this->nombre, $this->apellidos, $this->email);
         }
 
 

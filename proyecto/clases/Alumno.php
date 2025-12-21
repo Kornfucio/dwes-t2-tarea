@@ -2,18 +2,15 @@
 class Alumno extends Miembro
 {
     //Atributos
-    private int $edad;
-    private array $asignaturas;
+    public int $edad;
+    public array $asignaturas=[];
     private bool $cursoAbonado;
 
     //Métodos
 
-    public function __construct(int $id, string $nombre, string $apellidos, string $email, int $edad)
-    {
+    public function __construct(int $id, string $nombre, string $apellidos, string $email, int $edad)    {
         parent::__construct($id, $nombre, $apellidos, $email);
         $this->edad = $edad;
-        //$this->asignaturas = $asignaturas;
-        //$this->cursoAbonado = $cursoAbonado;
     }
     public function abonarCurso(): void
     {
